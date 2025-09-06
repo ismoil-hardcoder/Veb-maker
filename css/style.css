@@ -1,0 +1,136 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body va umumiy fon */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkslategray;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.rainbow-text {
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #00f260, #0575e6);
+  background-size: 300% 300%;
+  animation: rainbowAnim 10s ease infinite;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  user-select: none;
+}
+
+@keyframes rainbowAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Main qism */
+main {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Qidiruv konteyneri */
+.search-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#searchInput:focus {
+  box-shadow: 0 0 8px #57d3c6;
+}
+
+/* Qidiruv tugmasi */
+#searchBtn {
+  background: #6a0dad;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+#searchBtn:hover {
+  background: #9b30ff;
+  transform: scale(1.1);
+}
+
+/* Info box */
+.info-box p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* Tozalash tugmasi */
+footer {
+  margin-top: 2rem;
+}
+
+#clearBtn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+#clearBtn:hover {
+  background: #81c784;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  main {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  #searchInput,
+  #searchBtn {
+    font-size: 1rem;
+  }
+}
